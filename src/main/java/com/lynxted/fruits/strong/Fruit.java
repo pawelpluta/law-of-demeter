@@ -3,10 +3,10 @@ package com.lynxted.fruits.strong;
 import java.math.BigDecimal;
 
 abstract class Fruit {
-    private BigDecimal weight;
+    private PlanetWeight weight;
 
     BigDecimal computeWeight() {
-        return weight.multiply(getWeightPercent());
+        return weight.getWeight().multiply(getWeightPercent());
     }
     abstract BigDecimal getWeightPercent();
 }

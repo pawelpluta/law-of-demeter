@@ -8,6 +8,6 @@ class Orange extends Fruit {
 
     @Override
     BigDecimal computeWeight() {
-        return weight.multiply(PERCENT_OF_NET_WEIGHT);
+        return weight.getWeight().multiply(PERCENT_OF_NET_WEIGHT);
     }
 }
