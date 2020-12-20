@@ -5,13 +5,13 @@ import java.util.List;
 class Department {
 
     private DepartmentCode code;
-    private List<Division> divisions;
+    private List<Team> teams;
 
     DepartmentCode getCode() {
         return code;
     }
 
-    List<Division> getDivisions() {
-        return divisions;
+    List<Team> getTeams() {
+        return teams;
     }
 }

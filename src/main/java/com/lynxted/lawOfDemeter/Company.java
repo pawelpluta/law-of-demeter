@@ -13,8 +13,7 @@ class Company {
         Map<DepartmentCode, BigDecimal> costPerDepartment = new HashMap<>();
         departments.forEach(department -> {
             DepartmentCode departmentCode = department.getCode();
-            BigDecimal employeesCost = department.getDivisions().stream()
-                                                 .map(Division::getTeams).flatMap(List::stream)
+            BigDecimal employeesCost = department.getTeams().stream()
                                                  .map(Team::getMembers).flatMap(List::stream)
                                                  .map(Member::getCost).reduce(BigDecimal.ZERO, BigDecimal::add);
             costPerDepartment.put(departmentCode, employeesCost);
