@@ -6,6 +6,7 @@ import java.util.List;
 class Department {
 
     private DepartmentCode code;
+    private DepartmentType type;
     private List<Team> teams;
 
     DepartmentCode getCode() {
@@ -20,4 +21,7 @@ class Department {
         return team.getMembers().stream().map(Member::getCost).reduce(BigDecimal.ZERO, BigDecimal::add);
     }
 
+    boolean isCostCentre() {
+        return type instanceof CostCentre;
+    }
 }
