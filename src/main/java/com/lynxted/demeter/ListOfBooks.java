@@ -4,5 +4,5 @@ import java.util.List;
 
 class ListOfBooks {
 
-    List<Book> books;
+    private List<Book> books;
 }

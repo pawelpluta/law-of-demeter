@@ -1,8 +1,10 @@
 package com.lynxted.demeter;
 
+import java.util.Optional;
+
 class Documents {
 
-    Book search(BookIdentifier book) {
+    Optional<Book> search(BookIdentifier book) {
         throw new UnsupportedOperationException("Not implemented yet");
     }
 }

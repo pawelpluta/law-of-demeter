@@ -1,18 +1,15 @@
 package com.lynxted.demeter;
 
-class ReferenceSec {
-    BooksSec refBookSec;
-    Archive archive;
+import java.util.Optional;
 
-    Book refSearch(BookIdentifier book) {
-        Book bookFromBookSection = refBookSec.search(book);
-        if (bookFromBookSection != null) {
-            return bookFromBookSection;
-        }
-        Book microficheArchBook = archive.getArchMicrofiche().search(book);
-        if (microficheArchBook != null) {
-            return microficheArchBook;
-        }
-        return archive.getArchDocuments().search(book);
+class ReferenceSec {
+
+    private BooksSec refBookSec;
+    private Archive archive;
+
+    Optional<Book> refSearch(BookIdentifier book) {
+        return refBookSec.search(book)
+                  .or(() -> archive.getArchMicrofiche().search(book))
+                  .or(() -> archive.getArchDocuments().search(book));
     }
 }

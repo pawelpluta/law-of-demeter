@@ -1,11 +1,14 @@
 package com.lynxted.demeter;
 
-class Library {
-    ReferenceSec reference;
-    LoanSec loan;
-    JournalSec journal;
+import java.util.Optional;
 
-    void refSearch(BookIdentifier book) {
-        reference.refSearch(book);
+class Library {
+
+    private ReferenceSec reference;
+    private LoanSec loan;
+    private JournalSec journal;
+
+    Optional<Book> refSearch(BookIdentifier book) {
+        return reference.refSearch(book);
     }
 }

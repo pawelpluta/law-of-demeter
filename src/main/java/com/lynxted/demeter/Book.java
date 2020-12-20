@@ -2,7 +2,7 @@ package com.lynxted.demeter;
 
 class Book {
 
-    String title;
-    String author;
-    BookIdentifier id;
+    private String title;
+    private String author;
+    private BookIdentifier id;
 }

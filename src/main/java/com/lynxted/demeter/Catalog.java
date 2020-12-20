@@ -4,5 +4,5 @@ import java.util.List;
 
 class Catalog {
 
-    List<CatalogEntry> entries;
+    private List<CatalogEntry> entries;
 }

@@ -1,10 +1,13 @@
 package com.lynxted.demeter;
 
-class BooksSec {
-    ListOfBooks books;
-    Catalog bookCatalog;
+import java.util.Optional;
 
-    Book search(BookIdentifier book) {
+class BooksSec {
+
+    private ListOfBooks books;
+    private Catalog bookCatalog;
+
+    Optional<Book> search(BookIdentifier book) {
         throw new UnsupportedOperationException("Not implemented yet");
     }
 }

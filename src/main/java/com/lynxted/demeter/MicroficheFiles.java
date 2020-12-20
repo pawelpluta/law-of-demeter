@@ -1,11 +1,13 @@
 package com.lynxted.demeter;
 
+import java.util.Optional;
+
 class MicroficheFiles {
 
-    ListOfMicrofiche microList;
-    MicroficheCatalog microCat;
+    private ListOfMicrofiche microList;
+    private MicroficheCatalog microCat;
 
-    Book search(BookIdentifier book) {
+    Optional<Book> search(BookIdentifier book) {
         throw new UnsupportedOperationException("Not implemented yet");
     }
 }
